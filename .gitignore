@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+package-lock.json  # KEEP this line commented out, do NOT ignore package-lock.json
+deno.lock          # Ignore if you aren't using Deno intentionally
+
+# Production
+dist/
+build/
+
+# Misc and System
+.DS_Store
+.env
+.netlify/
