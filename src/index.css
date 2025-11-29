@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-black text-white antialiased;
+    }
+}
+
+@layer utilities {
+
+    /* Glassmorphism card style with red tint */
+    .glass-card {
+        @apply bg-red-950/10 backdrop-blur-md border border-white/5 shadow-xl;
+    }
+
+    /* Hover effect for glass cards */
+    .glass-card-hover {
+        @apply hover:bg-red-900/20 transition-all duration-300 hover:border-red-500/20 hover:shadow-red-500/10;
+    }
+
+    /* Gradient text utility */
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-rose-500 to-orange-500;
+    }
+
+    /* Mask for vertical scrolling */
+    .mask-gradient-y {
+        mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-red-900/50 rounded-full hover:bg-red-700/50;
+}
